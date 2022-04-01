@@ -8,7 +8,7 @@ export function SignInButton() {
 
     return session ? (
         <button 
-            type="button"
+            type='button'
             className={styles.signInButton}
             onClick={() => signOut()}
         >
@@ -18,7 +18,7 @@ export function SignInButton() {
         </button>
     ) : (
         <button 
-            type="button"
+            type='button'
             className={styles.signInButton}
             onClick={() => signIn('github')}
         >
