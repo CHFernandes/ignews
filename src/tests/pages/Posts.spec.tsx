@@ -27,17 +27,22 @@ describe('Posts page', () => {
             getAllByType: jest.fn().mockResolvedValueOnce(
                 [
                     {
-                        uid: 'fake-slug',
+                        uid: 'my-new-post',
                         data: {
-                            title: 'Fake title 1',
+                            title: [
+                                {
+                                    type: "heading1",
+                                    text: "My new post",
+                                },
+                            ],
                             content: [
                                 {
                                     type: 'paragraph',
-                                    text: 'Fake excerpt 1',
+                                    text: 'Post excerpt',
                                 },
                             ],
                         },
-                        last_publication_date: '2020-01-01',
+                        last_publication_date: '08-04-2022',
                     },
                 ],
             ),
@@ -50,10 +55,10 @@ describe('Posts page', () => {
                 props: {
                     posts: [
                         {
-                            slug: 'fake-slug',
-                            title: 'Fake title 1',
-                            excerpt: 'Fake excerpt 1',
-                            updated_at: '01 de janeiro de 2020',
+                            slug: 'my-new-post',
+                            title: 'My new post',
+                            excerpt: 'Post excerpt',
+                            updatedAt: '04 de agosto de 2022',
                         }
                     ]
                 }
