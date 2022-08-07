@@ -13,8 +13,6 @@ interface HomeProps {
 }
 
 export default function Home({product}: HomeProps) {
-  console.log(process.env.STRIPE_SUCCESS_URL)
-
   return (
     <>
       <Head>
