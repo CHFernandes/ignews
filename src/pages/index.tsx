@@ -13,6 +13,8 @@ interface HomeProps {
 }
 
 export default function Home({product}: HomeProps) {
+  console.log(process.env.STRIPE_SUCCESS_URL)
+
   return (
     <>
       <Head>
@@ -38,8 +40,6 @@ export default function Home({product}: HomeProps) {
 }
 
 export const getStaticProps: GetStaticProps = async () => {
-  console.log(process.env.STRIPE_SUCCESS_URL)
-
   const price = await stripe.prices.retrieve('price_1KcciFIP6km4ObYICzBDEAW9');
 
   const product = {
